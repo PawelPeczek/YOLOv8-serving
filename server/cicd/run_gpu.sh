@@ -1,0 +1,1 @@
+docker run  --runtime nvidia -p 8080:8080 yolov8-serving
