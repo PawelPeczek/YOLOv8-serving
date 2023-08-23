@@ -44,7 +44,7 @@ JSON document
 ```
 
 Where:
-* `bounding_box` describes BBox with detected object
+* `bounding_box` describes BBox with detected object. BBox coordinates in (left_top, right_bottom) mode.
 * `key_points` describes detected key-points within `bounding_box` object
 
 Important notes:
