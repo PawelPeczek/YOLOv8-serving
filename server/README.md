@@ -44,7 +44,7 @@ JSON document
 ```
 
 Where:
-* `bounding_box` describes BBox with detected object
+* `bounding_box` describes BBox with detected object. BBox coordinates in (left_top, right_bottom) mode.
 * `key_points` describes detected key-points within `bounding_box` object
 
 Important notes:
@@ -119,7 +119,7 @@ Directory with requirements files - decoupled by the type of dependencies.
 
 ### `serving_config` directory
 Contains configs determining TorchServe behaviour and script to prepare serving `*.mar` package
-required by TorchServe.
+required by T[README.md](..%2FREADME.md)orchServe.
 
 ### `serving_logic` directory
 Python package with TorchServe handler and inference logic. This code and model package are wrapped 

@@ -188,3 +188,5 @@ fabric.properties
 *.ckpt
 *.pt
 *.torchscript
+*/assets/*
+!*/assets/.gitkeep

@@ -1,0 +1,2 @@
+wget "https://www.fcbarcelona.com/fcbarcelona/photo/2018/07/06/dd2a56d9-bfd5-46de-8cdf-537b25434050/vTkTZRwU.jpg" -O assets/barcelona.jpg
+wget "https://thumbs.dreamstime.com/b/diversity-people-group-team-union-concept-71661912.jpg" -O assets/people.jpg
