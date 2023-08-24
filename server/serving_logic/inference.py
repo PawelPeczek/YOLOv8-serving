@@ -129,12 +129,12 @@ def run_nms_on_image_predictions(
         if box_score < bbox_confidence_threshold:
             continue
         x, y, w, h = image_predictions[0:4, i].round().to(int).tolist()
-        left_x = int(round((x - w / 2), 0))
-        left_y = int(round((y - h / 2), 0))
-        right_x = int(round((x + w / 2), 0))
-        right_y = int(round((x + h / 2), 0))
+        left_x = int((x - w / 2))
+        left_y = int((y - h / 2))
+        right_x = int((x + w / 2))
+        right_y = int((y + h / 2))
         scores.append(box_score.item())
-        boxes.append((left_x, left_y, right_x, right_y))
+        boxes.append([left_x, left_y, right_x, right_y])
         key_points.append(image_predictions[5:, i])
     indices = cv2.dnn.NMSBoxes(boxes, scores, bbox_confidence_threshold, iou_threshold)
     selected_boxes = [boxes[i] for i in indices]

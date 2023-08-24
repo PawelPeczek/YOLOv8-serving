@@ -27,6 +27,9 @@ class YoloClient:
         self.__encoding_quality = encoding_quality
         self.__max_workers_for_parallel_calls = max_workers_for_parallel_calls
 
+    def check_service_status(self) -> str:
+        return check_service_health(service_url=self.__service_url)
+
     def predict_on_item(
         self,
         source: Union[str, np.ndarray],

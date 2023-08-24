@@ -42,7 +42,7 @@ class PreProcessingContext:
 
 @dataclass(frozen=True)
 class RawInferenceResults:
-    boxes: List[Tuple[int, int, int, int]]
+    boxes: List[List[int]]
     boxes_scores: List[float]
     boxes_key_points: List[torch.Tensor]
 
